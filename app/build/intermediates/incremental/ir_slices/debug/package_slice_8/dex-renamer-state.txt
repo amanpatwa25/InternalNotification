@@ -1,0 +1,4 @@
+#Fri Jun 14 14:48:00 IST 2019
+base.0=C\:\\Users\\dell\\AndroidStudioProjects\\InternalNotification\\app\\build\\intermediates\\transforms\\dexMerger\\debug\\8
+path.0=classes.dex
+renamed.0=classes.dex
