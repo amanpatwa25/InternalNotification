@@ -1109,8 +1109,10 @@ id barrier
 id beginning
 id blocking
 id bottom
+id btn_image
 id btn_remove
 id btn_send
+id btn_send_img
 id buttonPanel
 id cancel_action
 id center
@@ -1241,6 +1243,7 @@ id search_src_text
 id search_voice_btn
 id select_dialog_listview
 id selected
+id send_sms
 id shortcut
 id showCustom
 id showHome
@@ -1346,6 +1349,7 @@ layout abc_search_dropdown_item_icons_2line
 layout abc_search_view
 layout abc_select_dialog_material
 layout abc_tooltip
+layout activity_image
 layout activity_main
 layout activity_register
 layout activity_start
@@ -1679,6 +1683,7 @@ style Base_Widget_MaterialComponents_TextInputLayout
 style CardView
 style CardView_Dark
 style CardView_Light
+style Dexter_Internal_Theme_Transparent
 style Platform_AppCompat
 style Platform_AppCompat_Light
 style Platform_MaterialComponents

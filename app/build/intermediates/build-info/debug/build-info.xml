@@ -5,59 +5,35 @@
     build-mode="COLD"
     density="xxhdpi"
     format="10"
-    ir-eligibility="R_CLASS_CHANGE"
+    ir-eligibility="COMPATIBLE"
     plugin-version="3.3.1"
-    timestamp="1560509670117"
+    timestamp="1561369407192"
     token="7397306021333340256"
     verifier="COLD_SWAP_REQUESTED" >
 
     <task
         name="javac"
-        duration="3543" />
+        duration="5072" />
     <task
         name="instant-run-dex"
         duration="0" />
     <task
         name="instant-run-transform"
-        duration="566" />
+        duration="493" />
     <task
         name="verifier"
-        duration="87" />
+        duration="425" />
 
     <artifact
-        location="C:\Users\dell\AndroidStudioProjects\InternalNotification\app\build\intermediates\resources\instant-run\debug\resources-debug.apk"
-        type="SPLIT" />
-    <artifact
-        location="C:\Users\dell\AndroidStudioProjects\InternalNotification\app\build\intermediates\split-apk\debug\slices\slice_5.apk"
-        type="SPLIT" />
-    <artifact
-        location="C:\Users\dell\AndroidStudioProjects\InternalNotification\app\build\intermediates\split-apk\debug\slices\slice_2.apk"
-        type="SPLIT" />
-    <artifact
         location="C:\Users\dell\AndroidStudioProjects\InternalNotification\app\build\intermediates\split-apk\debug\slices\slice_3.apk"
-        type="SPLIT" />
-    <artifact
-        location="C:\Users\dell\AndroidStudioProjects\InternalNotification\app\build\intermediates\split-apk\debug\slices\slice_6.apk"
-        type="SPLIT" />
-    <artifact
-        location="C:\Users\dell\AndroidStudioProjects\InternalNotification\app\build\intermediates\split-apk\debug\slices\slice_0.apk"
-        type="SPLIT" />
-    <artifact
-        location="C:\Users\dell\AndroidStudioProjects\InternalNotification\app\build\intermediates\split-apk\debug\slices\slice_7.apk"
-        type="SPLIT" />
-    <artifact
-        location="C:\Users\dell\AndroidStudioProjects\InternalNotification\app\build\intermediates\split-apk\debug\slices\slice_4.apk"
-        type="SPLIT" />
-    <artifact
-        location="C:\Users\dell\AndroidStudioProjects\InternalNotification\app\build\intermediates\split-apk\debug\slices\slice_9.apk"
         type="SPLIT" />
 
     <build
         build-mode="FULL"
-        timestamp="1560508932223"
+        timestamp="1561369297742"
         verifier="FULL_BUILD_REQUESTED" >
         <artifact
-            location="C:\Users\dell\AndroidStudioProjects\InternalNotification\app\build\intermediates\split-apk\debug\slices\slice_3.apk"
+            location="C:\Users\dell\AndroidStudioProjects\InternalNotification\app\build\intermediates\resources\instant-run\debug\resources-debug.apk"
             type="SPLIT" />
         <artifact
             location="C:\Users\dell\AndroidStudioProjects\InternalNotification\app\build\intermediates\split-apk\debug\slices\slice_5.apk"
@@ -67,9 +43,6 @@
             type="SPLIT" />
         <artifact
             location="C:\Users\dell\AndroidStudioProjects\InternalNotification\app\build\intermediates\split-apk\debug\slices\slice_9.apk"
-            type="SPLIT" />
-        <artifact
-            location="C:\Users\dell\AndroidStudioProjects\InternalNotification\app\build\intermediates\resources\instant-run\debug\resources-debug.apk"
             type="SPLIT" />
         <artifact
             location="C:\Users\dell\AndroidStudioProjects\InternalNotification\app\build\intermediates\split-apk\debug\slices\slice_2.apk"
@@ -93,40 +66,19 @@
             location="C:\Users\dell\AndroidStudioProjects\InternalNotification\app\build\intermediates\split-apk\debug\slices\slice_4.apk"
             type="SPLIT" />
         <artifact
+            location="C:\Users\dell\AndroidStudioProjects\InternalNotification\app\build\intermediates\split-apk\debug\slices\slice_3.apk"
+            type="SPLIT" />
+        <artifact
             location="C:\Users\dell\AndroidStudioProjects\InternalNotification\app\build\intermediates\instant-run-apk\debug\app-debug.apk"
             type="SPLIT_MAIN" />
     </build>
     <build
         build-mode="COLD"
-        ir-eligibility="R_CLASS_CHANGE"
-        timestamp="1560509670117"
+        ir-eligibility="COMPATIBLE"
+        timestamp="1561369407192"
         verifier="COLD_SWAP_REQUESTED" >
         <artifact
-            location="C:\Users\dell\AndroidStudioProjects\InternalNotification\app\build\intermediates\resources\instant-run\debug\resources-debug.apk"
-            type="SPLIT" />
-        <artifact
-            location="C:\Users\dell\AndroidStudioProjects\InternalNotification\app\build\intermediates\split-apk\debug\slices\slice_5.apk"
-            type="SPLIT" />
-        <artifact
-            location="C:\Users\dell\AndroidStudioProjects\InternalNotification\app\build\intermediates\split-apk\debug\slices\slice_2.apk"
-            type="SPLIT" />
-        <artifact
             location="C:\Users\dell\AndroidStudioProjects\InternalNotification\app\build\intermediates\split-apk\debug\slices\slice_3.apk"
-            type="SPLIT" />
-        <artifact
-            location="C:\Users\dell\AndroidStudioProjects\InternalNotification\app\build\intermediates\split-apk\debug\slices\slice_6.apk"
-            type="SPLIT" />
-        <artifact
-            location="C:\Users\dell\AndroidStudioProjects\InternalNotification\app\build\intermediates\split-apk\debug\slices\slice_0.apk"
-            type="SPLIT" />
-        <artifact
-            location="C:\Users\dell\AndroidStudioProjects\InternalNotification\app\build\intermediates\split-apk\debug\slices\slice_7.apk"
-            type="SPLIT" />
-        <artifact
-            location="C:\Users\dell\AndroidStudioProjects\InternalNotification\app\build\intermediates\split-apk\debug\slices\slice_4.apk"
-            type="SPLIT" />
-        <artifact
-            location="C:\Users\dell\AndroidStudioProjects\InternalNotification\app\build\intermediates\split-apk\debug\slices\slice_9.apk"
             type="SPLIT" />
     </build>
 

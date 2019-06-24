@@ -1,9 +1,10 @@
 -- Merging decision tree log ---
 manifest
-ADDED from C:\Users\dell\AndroidStudioProjects\InternalNotification\app\src\main\AndroidManifest.xml:2:1-37:12
-INJECTED from C:\Users\dell\AndroidStudioProjects\InternalNotification\app\src\main\AndroidManifest.xml:2:1-37:12
-INJECTED from C:\Users\dell\AndroidStudioProjects\InternalNotification\app\src\main\AndroidManifest.xml:2:1-37:12
-INJECTED from C:\Users\dell\AndroidStudioProjects\InternalNotification\app\src\main\AndroidManifest.xml:2:1-37:12
+ADDED from C:\Users\dell\AndroidStudioProjects\InternalNotification\app\src\main\AndroidManifest.xml:2:1-42:12
+INJECTED from C:\Users\dell\AndroidStudioProjects\InternalNotification\app\src\main\AndroidManifest.xml:2:1-42:12
+INJECTED from C:\Users\dell\AndroidStudioProjects\InternalNotification\app\src\main\AndroidManifest.xml:2:1-42:12
+INJECTED from C:\Users\dell\AndroidStudioProjects\InternalNotification\app\src\main\AndroidManifest.xml:2:1-42:12
+MERGED from [com.karumi:dexter:4.2.0] C:\Users\dell\.gradle\caches\transforms-2\files-2.1\2747c590793713cb558a1a477a8835cc\AndroidManifest.xml:17:1-32:12
 MERGED from [com.android.support:design:28.0.0] C:\Users\dell\.gradle\caches\transforms-2\files-2.1\54f5692cd41e90dfc8f7eacf3219e4fe\AndroidManifest.xml:17:1-24:12
 MERGED from [com.android.support:appcompat-v7:28.0.0] C:\Users\dell\.gradle\caches\transforms-2\files-2.1\a847f49a77edd7c4f1c1887de607ce40\AndroidManifest.xml:17:1-22:12
 MERGED from [com.android.support:palette-v7:28.0.0] C:\Users\dell\.gradle\caches\transforms-2\files-2.1\7d5dea4e22042f364c96fa79593c647e\AndroidManifest.xml:17:1-22:12
@@ -65,20 +66,20 @@ MERGED from [android.arch.lifecycle:livedata:1.1.1] C:\Users\dell\.gradle\caches
 MERGED from [android.arch.lifecycle:livedata-core:1.1.1] C:\Users\dell\.gradle\caches\transforms-2\files-2.1\67632c64835170c9cdcf33c4cd405878\AndroidManifest.xml:17:1-22:12
 MERGED from [android.arch.core:runtime:1.1.1] C:\Users\dell\.gradle\caches\transforms-2\files-2.1\0d00b74312bd70b0ecc94932354e6a18\AndroidManifest.xml:17:1-22:12
 MERGED from [com.google.firebase:firebase-database-collection:16.0.1] C:\Users\dell\.gradle\caches\transforms-2\files-2.1\214f5221d00a6fdeb498998374a9e77c\AndroidManifest.xml:2:1-7:12
-INJECTED from C:\Users\dell\AndroidStudioProjects\InternalNotification\app\src\main\AndroidManifest.xml:2:1-37:12
-INJECTED from C:\Users\dell\AndroidStudioProjects\InternalNotification\app\src\main\AndroidManifest.xml:2:1-37:12
-INJECTED from C:\Users\dell\AndroidStudioProjects\InternalNotification\app\src\main\AndroidManifest.xml:2:1-37:12
+INJECTED from C:\Users\dell\AndroidStudioProjects\InternalNotification\app\src\main\AndroidManifest.xml:2:1-42:12
+INJECTED from C:\Users\dell\AndroidStudioProjects\InternalNotification\app\src\main\AndroidManifest.xml:2:1-42:12
+INJECTED from C:\Users\dell\AndroidStudioProjects\InternalNotification\app\src\main\AndroidManifest.xml:2:1-42:12
 	package
 		ADDED from C:\Users\dell\AndroidStudioProjects\InternalNotification\app\src\main\AndroidManifest.xml:3:5-50
 		INJECTED from C:\Users\dell\AndroidStudioProjects\InternalNotification\app\src\main\AndroidManifest.xml
 		INJECTED from C:\Users\dell\AndroidStudioProjects\InternalNotification\app\src\main\AndroidManifest.xml
 	android:versionName
 		INJECTED from C:\Users\dell\AndroidStudioProjects\InternalNotification\app\src\main\AndroidManifest.xml
-		ADDED from C:\Users\dell\AndroidStudioProjects\InternalNotification\app\src\main\AndroidManifest.xml:2:1-37:12
+		ADDED from C:\Users\dell\AndroidStudioProjects\InternalNotification\app\src\main\AndroidManifest.xml:2:1-42:12
 		INJECTED from C:\Users\dell\AndroidStudioProjects\InternalNotification\app\src\main\AndroidManifest.xml
 	android:versionCode
 		INJECTED from C:\Users\dell\AndroidStudioProjects\InternalNotification\app\src\main\AndroidManifest.xml
-		ADDED from C:\Users\dell\AndroidStudioProjects\InternalNotification\app\src\main\AndroidManifest.xml:2:1-37:12
+		ADDED from C:\Users\dell\AndroidStudioProjects\InternalNotification\app\src\main\AndroidManifest.xml:2:1-42:12
 		INJECTED from C:\Users\dell\AndroidStudioProjects\InternalNotification\app\src\main\AndroidManifest.xml
 	xmlns:android
 		ADDED from C:\Users\dell\AndroidStudioProjects\InternalNotification\app\src\main\AndroidManifest.xml:2:11-69
@@ -126,8 +127,18 @@ MERGED from [com.google.android.gms:play-services-measurement-sdk-api:16.4.0] C:
 MERGED from [com.google.android.gms:play-services-measurement-sdk-api:16.4.0] C:\Users\dell\.gradle\caches\transforms-2\files-2.1\a166d879830180dae2296a472240ba33\AndroidManifest.xml:24:5-79
 	android:name
 		ADDED from C:\Users\dell\AndroidStudioProjects\InternalNotification\app\src\main\AndroidManifest.xml:9:22-76
+uses-permission#android.permission.READ_EXTERNAL_STORAGE
+ADDED from C:\Users\dell\AndroidStudioProjects\InternalNotification\app\src\main\AndroidManifest.xml:10:5-79
+	android:name
+		ADDED from C:\Users\dell\AndroidStudioProjects\InternalNotification\app\src\main\AndroidManifest.xml:10:22-77
+uses-permission#android.permission.WRITE_EXTERNAL_STORAGE
+ADDED from C:\Users\dell\AndroidStudioProjects\InternalNotification\app\src\main\AndroidManifest.xml:11:5-80
+	android:name
+		ADDED from C:\Users\dell\AndroidStudioProjects\InternalNotification\app\src\main\AndroidManifest.xml:11:22-78
 application
-ADDED from C:\Users\dell\AndroidStudioProjects\InternalNotification\app\src\main\AndroidManifest.xml:11:5-35:19
+ADDED from C:\Users\dell\AndroidStudioProjects\InternalNotification\app\src\main\AndroidManifest.xml:13:5-40:19
+MERGED from [com.karumi:dexter:4.2.0] C:\Users\dell\.gradle\caches\transforms-2\files-2.1\2747c590793713cb558a1a477a8835cc\AndroidManifest.xml:26:5-30:19
+MERGED from [com.karumi:dexter:4.2.0] C:\Users\dell\.gradle\caches\transforms-2\files-2.1\2747c590793713cb558a1a477a8835cc\AndroidManifest.xml:26:5-30:19
 MERGED from [com.android.support:design:28.0.0] C:\Users\dell\.gradle\caches\transforms-2\files-2.1\54f5692cd41e90dfc8f7eacf3219e4fe\AndroidManifest.xml:22:5-20
 MERGED from [com.android.support:design:28.0.0] C:\Users\dell\.gradle\caches\transforms-2\files-2.1\54f5692cd41e90dfc8f7eacf3219e4fe\AndroidManifest.xml:22:5-20
 MERGED from [com.google.android.gms:play-services-auth:16.0.1] C:\Users\dell\.gradle\caches\transforms-2\files-2.1\9d785087d73cf21dad7ed9a6591f1aad\AndroidManifest.xml:22:5-37:19
@@ -185,59 +196,65 @@ MERGED from [com.android.support:versionedparcelable:28.0.0] C:\Users\dell\.grad
 	android:appComponentFactory
 		ADDED from [com.android.support:support-compat:28.0.0] C:\Users\dell\.gradle\caches\transforms-2\files-2.1\6303a8aa7cd771a1dcf004a1787a0563\AndroidManifest.xml:22:18-91
 	android:supportsRtl
-		ADDED from C:\Users\dell\AndroidStudioProjects\InternalNotification\app\src\main\AndroidManifest.xml:17:9-35
+		ADDED from C:\Users\dell\AndroidStudioProjects\InternalNotification\app\src\main\AndroidManifest.xml:19:9-35
 	android:label
-		ADDED from C:\Users\dell\AndroidStudioProjects\InternalNotification\app\src\main\AndroidManifest.xml:15:9-41
+		ADDED from C:\Users\dell\AndroidStudioProjects\InternalNotification\app\src\main\AndroidManifest.xml:17:9-41
 	android:roundIcon
-		ADDED from C:\Users\dell\AndroidStudioProjects\InternalNotification\app\src\main\AndroidManifest.xml:16:9-54
+		ADDED from C:\Users\dell\AndroidStudioProjects\InternalNotification\app\src\main\AndroidManifest.xml:18:9-54
 	android:icon
-		ADDED from C:\Users\dell\AndroidStudioProjects\InternalNotification\app\src\main\AndroidManifest.xml:14:9-43
+		ADDED from C:\Users\dell\AndroidStudioProjects\InternalNotification\app\src\main\AndroidManifest.xml:16:9-43
 	android:allowBackup
-		ADDED from C:\Users\dell\AndroidStudioProjects\InternalNotification\app\src\main\AndroidManifest.xml:13:9-35
+		ADDED from C:\Users\dell\AndroidStudioProjects\InternalNotification\app\src\main\AndroidManifest.xml:15:9-35
 	android:theme
-		ADDED from C:\Users\dell\AndroidStudioProjects\InternalNotification\app\src\main\AndroidManifest.xml:18:9-40
+		ADDED from C:\Users\dell\AndroidStudioProjects\InternalNotification\app\src\main\AndroidManifest.xml:20:9-40
 	android:name
-		ADDED from C:\Users\dell\AndroidStudioProjects\InternalNotification\app\src\main\AndroidManifest.xml:12:9-38
+		ADDED from C:\Users\dell\AndroidStudioProjects\InternalNotification\app\src\main\AndroidManifest.xml:14:9-38
+activity#patwa.aman.com.internalnotification.ImageActivity
+ADDED from C:\Users\dell\AndroidStudioProjects\InternalNotification\app\src\main\AndroidManifest.xml:21:9-23:20
+	android:name
+		ADDED from C:\Users\dell\AndroidStudioProjects\InternalNotification\app\src\main\AndroidManifest.xml:21:19-48
 activity#patwa.aman.com.internalnotification.RegisterActivity
-ADDED from C:\Users\dell\AndroidStudioProjects\InternalNotification\app\src\main\AndroidManifest.xml:19:9-63
+ADDED from C:\Users\dell\AndroidStudioProjects\InternalNotification\app\src\main\AndroidManifest.xml:24:9-54
 	android:name
-		ADDED from C:\Users\dell\AndroidStudioProjects\InternalNotification\app\src\main\AndroidManifest.xml:19:19-51
+		ADDED from C:\Users\dell\AndroidStudioProjects\InternalNotification\app\src\main\AndroidManifest.xml:24:19-51
 activity#patwa.aman.com.internalnotification.StartActivity
-ADDED from C:\Users\dell\AndroidStudioProjects\InternalNotification\app\src\main\AndroidManifest.xml:20:9-27:20
+ADDED from C:\Users\dell\AndroidStudioProjects\InternalNotification\app\src\main\AndroidManifest.xml:25:9-32:20
 	android:name
-		ADDED from C:\Users\dell\AndroidStudioProjects\InternalNotification\app\src\main\AndroidManifest.xml:20:19-48
+		ADDED from C:\Users\dell\AndroidStudioProjects\InternalNotification\app\src\main\AndroidManifest.xml:25:19-48
 intent-filter#action:name:android.intent.action.MAIN+action:name:android.intent.action.VIEW+category:name:android.intent.category.LAUNCHER
-ADDED from C:\Users\dell\AndroidStudioProjects\InternalNotification\app\src\main\AndroidManifest.xml:21:13-26:29
+ADDED from C:\Users\dell\AndroidStudioProjects\InternalNotification\app\src\main\AndroidManifest.xml:26:13-31:29
 action#android.intent.action.MAIN
-ADDED from C:\Users\dell\AndroidStudioProjects\InternalNotification\app\src\main\AndroidManifest.xml:22:17-69
+ADDED from C:\Users\dell\AndroidStudioProjects\InternalNotification\app\src\main\AndroidManifest.xml:27:17-69
 	android:name
-		ADDED from C:\Users\dell\AndroidStudioProjects\InternalNotification\app\src\main\AndroidManifest.xml:22:25-66
+		ADDED from C:\Users\dell\AndroidStudioProjects\InternalNotification\app\src\main\AndroidManifest.xml:27:25-66
 action#android.intent.action.VIEW
-ADDED from C:\Users\dell\AndroidStudioProjects\InternalNotification\app\src\main\AndroidManifest.xml:23:17-69
+ADDED from C:\Users\dell\AndroidStudioProjects\InternalNotification\app\src\main\AndroidManifest.xml:28:17-69
 	android:name
-		ADDED from C:\Users\dell\AndroidStudioProjects\InternalNotification\app\src\main\AndroidManifest.xml:23:25-66
+		ADDED from C:\Users\dell\AndroidStudioProjects\InternalNotification\app\src\main\AndroidManifest.xml:28:25-66
 category#android.intent.category.LAUNCHER
-ADDED from C:\Users\dell\AndroidStudioProjects\InternalNotification\app\src\main\AndroidManifest.xml:25:17-77
+ADDED from C:\Users\dell\AndroidStudioProjects\InternalNotification\app\src\main\AndroidManifest.xml:30:17-77
 	android:name
-		ADDED from C:\Users\dell\AndroidStudioProjects\InternalNotification\app\src\main\AndroidManifest.xml:25:27-74
+		ADDED from C:\Users\dell\AndroidStudioProjects\InternalNotification\app\src\main\AndroidManifest.xml:30:27-74
 activity#patwa.aman.com.internalnotification.MainActivity
-ADDED from C:\Users\dell\AndroidStudioProjects\InternalNotification\app\src\main\AndroidManifest.xml:28:9-59
+ADDED from C:\Users\dell\AndroidStudioProjects\InternalNotification\app\src\main\AndroidManifest.xml:33:9-50
 	android:name
-		ADDED from C:\Users\dell\AndroidStudioProjects\InternalNotification\app\src\main\AndroidManifest.xml:28:19-47
+		ADDED from C:\Users\dell\AndroidStudioProjects\InternalNotification\app\src\main\AndroidManifest.xml:33:19-47
 service#patwa.aman.com.internalnotification.MyMessagingService
-ADDED from C:\Users\dell\AndroidStudioProjects\InternalNotification\app\src\main\AndroidManifest.xml:30:9-34:19
+ADDED from C:\Users\dell\AndroidStudioProjects\InternalNotification\app\src\main\AndroidManifest.xml:35:9-39:19
 	android:name
-		ADDED from C:\Users\dell\AndroidStudioProjects\InternalNotification\app\src\main\AndroidManifest.xml:30:18-52
+		ADDED from C:\Users\dell\AndroidStudioProjects\InternalNotification\app\src\main\AndroidManifest.xml:35:18-52
 intent-filter#action:name:com.google.firebase.MESSAGING_EVENT
-ADDED from C:\Users\dell\AndroidStudioProjects\InternalNotification\app\src\main\AndroidManifest.xml:31:13-33:29
+ADDED from C:\Users\dell\AndroidStudioProjects\InternalNotification\app\src\main\AndroidManifest.xml:36:13-38:29
 action#com.google.firebase.MESSAGING_EVENT
-ADDED from C:\Users\dell\AndroidStudioProjects\InternalNotification\app\src\main\AndroidManifest.xml:32:17-78
+ADDED from C:\Users\dell\AndroidStudioProjects\InternalNotification\app\src\main\AndroidManifest.xml:37:17-78
 	android:name
-		ADDED from C:\Users\dell\AndroidStudioProjects\InternalNotification\app\src\main\AndroidManifest.xml:32:25-75
+		ADDED from C:\Users\dell\AndroidStudioProjects\InternalNotification\app\src\main\AndroidManifest.xml:37:25-75
 uses-sdk
 INJECTED from C:\Users\dell\AndroidStudioProjects\InternalNotification\app\src\main\AndroidManifest.xml reason: use-sdk injection requested
 INJECTED from C:\Users\dell\AndroidStudioProjects\InternalNotification\app\src\main\AndroidManifest.xml
 INJECTED from C:\Users\dell\AndroidStudioProjects\InternalNotification\app\src\main\AndroidManifest.xml
+MERGED from [com.karumi:dexter:4.2.0] C:\Users\dell\.gradle\caches\transforms-2\files-2.1\2747c590793713cb558a1a477a8835cc\AndroidManifest.xml:22:5-24:41
+MERGED from [com.karumi:dexter:4.2.0] C:\Users\dell\.gradle\caches\transforms-2\files-2.1\2747c590793713cb558a1a477a8835cc\AndroidManifest.xml:22:5-24:41
 MERGED from [com.android.support:design:28.0.0] C:\Users\dell\.gradle\caches\transforms-2\files-2.1\54f5692cd41e90dfc8f7eacf3219e4fe\AndroidManifest.xml:20:5-44
 MERGED from [com.android.support:design:28.0.0] C:\Users\dell\.gradle\caches\transforms-2\files-2.1\54f5692cd41e90dfc8f7eacf3219e4fe\AndroidManifest.xml:20:5-44
 MERGED from [com.android.support:appcompat-v7:28.0.0] C:\Users\dell\.gradle\caches\transforms-2\files-2.1\a847f49a77edd7c4f1c1887de607ce40\AndroidManifest.xml:20:5-44
@@ -370,6 +387,12 @@ INJECTED from C:\Users\dell\AndroidStudioProjects\InternalNotification\app\src\m
 		INJECTED from C:\Users\dell\AndroidStudioProjects\InternalNotification\app\src\main\AndroidManifest.xml
 		ADDED from C:\Users\dell\AndroidStudioProjects\InternalNotification\app\src\main\AndroidManifest.xml
 		INJECTED from C:\Users\dell\AndroidStudioProjects\InternalNotification\app\src\main\AndroidManifest.xml
+activity#com.karumi.dexter.DexterActivity
+ADDED from [com.karumi:dexter:4.2.0] C:\Users\dell\.gradle\caches\transforms-2\files-2.1\2747c590793713cb558a1a477a8835cc\AndroidManifest.xml:27:9-29:72
+	android:theme
+		ADDED from [com.karumi:dexter:4.2.0] C:\Users\dell\.gradle\caches\transforms-2\files-2.1\2747c590793713cb558a1a477a8835cc\AndroidManifest.xml:29:13-69
+	android:name
+		ADDED from [com.karumi:dexter:4.2.0] C:\Users\dell\.gradle\caches\transforms-2\files-2.1\2747c590793713cb558a1a477a8835cc\AndroidManifest.xml:28:13-60
 activity#com.google.android.gms.auth.api.signin.internal.SignInHubActivity
 ADDED from [com.google.android.gms:play-services-auth:16.0.1] C:\Users\dell\.gradle\caches\transforms-2\files-2.1\9d785087d73cf21dad7ed9a6591f1aad\AndroidManifest.xml:23:9-27:75
 	android:excludeFromRecents

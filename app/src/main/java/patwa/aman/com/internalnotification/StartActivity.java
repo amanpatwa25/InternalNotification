@@ -1,14 +1,21 @@
 package patwa.aman.com.internalnotification;
 
+import android.Manifest;
 import android.content.Context;
+import android.content.DialogInterface;
 import android.content.Intent;
 import android.content.SharedPreferences;
+import android.content.pm.PackageManager;
 import android.database.Cursor;
 import android.graphics.Bitmap;
 import android.graphics.BitmapFactory;
 import android.graphics.Color;
 import android.net.Uri;
 import android.provider.ContactsContract;
+import android.support.annotation.NonNull;
+import android.support.v4.app.ActivityCompat;
+import android.support.v4.content.ContextCompat;
+import android.support.v7.app.AlertDialog;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.support.v7.widget.LinearLayoutManager;
@@ -25,6 +32,7 @@ import com.android.volley.AuthFailureError;
 import com.android.volley.Request;
 import com.android.volley.Response;
 import com.android.volley.VolleyError;
+import com.android.volley.toolbox.ImageLoader;
 import com.android.volley.toolbox.StringRequest;
 
 import org.json.JSONArray;
@@ -36,19 +44,21 @@ import java.io.IOException;
 import java.io.InputStream;
 import java.net.HttpURLConnection;
 import java.net.URL;
+import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.Map;
 
 
 public class StartActivity extends AppCompatActivity implements ConnectivityReceiver.ConnectivityReceiverListener  {
-
+    private int STORAGE_PERMISSION_CODE = 1;
     String  tag_string_req = "string_req";
     RecyclerView rv;
     JSONArray jsonArray;
-    String url = "https://ops.coutloot.com/internalApp/getAllNotifications";
+    String url = "http://ops.coutloot.com:4321/internalApp/getAllNotifications";
     String email,deviceToken;
     ImageView iv;
     static Context context;
+    ArrayList<Notification> notifications = new ArrayList<Notification>();
 
     @Override
     protected void onStart() {
@@ -100,6 +110,7 @@ public class StartActivity extends AppCompatActivity implements ConnectivityRece
         email = pref.getString("email",null);
         deviceToken = pref.getString("deviceToken",null);
 
+
         System.out.println("email"+email);
         System.out.println("deviceToken:"+deviceToken);
 
@@ -127,21 +138,13 @@ public class StartActivity extends AppCompatActivity implements ConnectivityRece
 
         }
 
-
-//        Uri imgUri = Uri.parse("http://unsplash.com/photos/1HZcJjdtc9g");
-//        Intent whatsappIntent = new Intent(Intent.ACTION_SEND);
-//        whatsappIntent.setType("text/plain");
-//        whatsappIntent.setPackage("com.whatsapp");
-//        whatsappIntent.putExtra(Intent.EXTRA_TEXT, "The text you wanted to share");
-//        whatsappIntent.putExtra(Intent.EXTRA_STREAM, imgUri);
-//        whatsappIntent.setType("image/jpeg");
-//        whatsappIntent.addFlags(Intent.FLAG_GRANT_READ_URI_PERMISSION);
-//
-//        try {
-//            startActivity(whatsappIntent);
-//        } catch (android.content.ActivityNotFoundException ex) {
-//            Toast.makeText(this, "Whatsapp not install", Toast.LENGTH_SHORT).show();
-//        }
+        if (ContextCompat.checkSelfPermission(this,
+                Manifest.permission.READ_EXTERNAL_STORAGE) == PackageManager.PERMISSION_GRANTED) {
+            Toast.makeText(this, "You have already granted this permission!",
+                    Toast.LENGTH_SHORT).show();
+        } else {
+            requestStoragePermission();
+        }
 
 
     }
@@ -181,6 +184,7 @@ public class StartActivity extends AppCompatActivity implements ConnectivityRece
     void getApi(){
         StringRequest stringRequest = new StringRequest(Request.Method.POST, url,
                 new Response.Listener<String>() {
+            int j;
                     @Override
                     public void onResponse(String response) {
 //                                                    Toast.makeText(MainActivity.this,response,Toast.LENGTH_LONG).show();
@@ -194,9 +198,7 @@ public class StartActivity extends AppCompatActivity implements ConnectivityRece
                             int success = jsonObject1.getInt("success");
 
                             jsonArray = jsonObject1.getJSONArray("notification");
-                            String[] message = new String[jsonArray.length()];
-                            String[] mobile = new String[jsonArray.length()];
-                            String[] id = new String[jsonArray.length()];
+
 
                             if (jsonArray.length() == 0 && success == 0) {
                                 Toast.makeText(StartActivity.this, "No notification for you", Toast.LENGTH_LONG).show();
@@ -208,30 +210,23 @@ public class StartActivity extends AppCompatActivity implements ConnectivityRece
                                     String mobile1 = jsonObject.getString("mobile");
                                     String message1 = jsonObject.getString("message");
                                     String id1 = jsonObject.getString("_id");
+                                    JSONArray imageUrl = jsonObject.getJSONArray("imageUrl");
+                                    ArrayList<String> image = new ArrayList<>();
+                                    for(j=0;j<imageUrl.length();j++){
 
-                                    mobile[i] = mobile1;
-                                    message[i] = message1;
-                                    id[i] = id1;
+                                        image.add(imageUrl.get(j).toString());
+                                    }
 
-//                                    try {
-//                                        URL url = new URL(image);
-//                                        HttpURLConnection connection = (HttpURLConnection) url.openConnection();
-//                                        connection.setDoInput(true);
-//                                        connection.connect();
-//                                        InputStream input = connection.getInputStream();
-//                                        Bitmap myBitmap = BitmapFactory.decodeStream(input);
-//                                        Log.v("Bitmap", String.valueOf(myBitmap));
-//
-//                                    } catch (IOException e) {
-//                                        e.printStackTrace();
-//                                    }
+                                    System.out.println("jsonArray"+imageUrl);
+                                    Log.v("MainImageUrl",imageUrl+"");
+
+                                    Notification newNoti = new Notification(message1,mobile1,id1,image);
+
+                                    notifications.add(newNoti);
+
                                 }
 
-                            Log.v("Mobile:", String.valueOf(mobile));
-                            Log.v("Message:", message + "");
-                            Log.v("id", id + "");
-
-                            RecyclerAdapter adapter = new RecyclerAdapter(mobile, message, id, StartActivity.this);
+                            RecyclerAdapter adapter = new RecyclerAdapter(StartActivity.this, notifications, StartActivity.this);
                             adapter.notifyDataSetChanged();
                             rv.setAdapter(adapter);
 
@@ -270,21 +265,42 @@ public class StartActivity extends AppCompatActivity implements ConnectivityRece
         showSnack(isConnected);
     }
 
-//    public String hasWhatsapp(String contactID) {
-//        String rowContactId = null;
-//        boolean hasWhatsApp;
-//
-//        String[] projection = new String[]{ContactsContract.RawContacts._ID};
-//        String selection = ContactsContract.Data.CONTACT_ID + " = ? AND account_type IN (?)";
-//        String[] selectionArgs = new String[]{contactID, "com.whatsapp"};
-//        Cursor cursor = getContentResolver().query(ContactsContract.RawContacts.CONTENT_URI, projection, selection, selectionArgs, null);
-//        if (cursor != null) {
-//            hasWhatsApp = cursor.moveToNext();
-//            if (hasWhatsApp) {
-//                rowContactId = cursor.getString(0);
-//            }
-//            cursor.close();
-//        }
-//        return rowContactId;
-//    }
+    private void requestStoragePermission() {
+        if (ActivityCompat.shouldShowRequestPermissionRationale(this,
+                Manifest.permission.READ_EXTERNAL_STORAGE)) {
+
+            new AlertDialog.Builder(this)
+                    .setTitle("Permission needed")
+                    .setMessage("This permission is needed for storage")
+                    .setPositiveButton("ok", new DialogInterface.OnClickListener() {
+                        @Override
+                        public void onClick(DialogInterface dialog, int which) {
+                            ActivityCompat.requestPermissions(StartActivity.this,
+                                    new String[] {Manifest.permission.READ_EXTERNAL_STORAGE}, STORAGE_PERMISSION_CODE);
+                        }
+                    })
+                    .setNegativeButton("cancel", new DialogInterface.OnClickListener() {
+                        @Override
+                        public void onClick(DialogInterface dialog, int which) {
+                            dialog.dismiss();
+                        }
+                    })
+                    .create().show();
+
+        } else {
+            ActivityCompat.requestPermissions(this,
+                    new String[] {Manifest.permission.READ_EXTERNAL_STORAGE}, STORAGE_PERMISSION_CODE);
+        }
+    }
+
+    @Override
+    public void onRequestPermissionsResult(int requestCode, @NonNull String[] permissions, @NonNull int[] grantResults) {
+        if (requestCode == STORAGE_PERMISSION_CODE)  {
+            if (grantResults.length > 0 && grantResults[0] == PackageManager.PERMISSION_GRANTED) {
+                Toast.makeText(this, "Permission GRANTED", Toast.LENGTH_SHORT).show();
+            } else {
+                Toast.makeText(this, "Permission DENIED", Toast.LENGTH_SHORT).show();
+            }
+        }
+    }
 }
